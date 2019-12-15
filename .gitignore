@@ -1,0 +1,38 @@
+#ignore everything by default
+/*
+!.config/
+.config/*
+
+# gitignore
+!.gitignore
+
+# x
+!.xinitrc
+!.Xresources
+
+#bash
+!.bash_profile
+!.bashrc
+
+#bin
+!bin/
+
+#wallpaper
+!wallpaper
+!.fehbg
+
+#gtk
+!.gtkrc-2.0
+!.config/gtk-3.0/
+
+#ranger
+!.config/ranger/
+
+#sxhkd
+!.config/sxhkd/
+
+#vim
+!.config/nvim/
+
+#youtube-dl
+!.config/youtube-dl/

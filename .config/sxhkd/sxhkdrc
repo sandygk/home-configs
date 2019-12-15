@@ -1,0 +1,39 @@
+# ~/.config/sxhkd/sxhkdrc
+
+# launch apps 
+{_, shift +} super + ctrl + {Return,space,d,f,v,k,g,p,i,c,b,o}
+    {_, sudo} {$TERMINAL,google-chrome-beta,dmenu_run,firefox,code,krita,godot,pcmanfm,inkscape,cura,blender,openscad}
+
+{_, shift +} super + alt + {t,p,g,c,f}
+    {_, sudo} {transmission-gtk,pia,gimp,cool-retro-term,freecad}
+    
+{_, shift +} super + ctrl + {r}
+    {_, sudo} $TERMINAL -e {ranger}
+    
+{_, shift +} super + alt + {v}
+    {_, sudo} $TERMINAL -e {nvim}
+
+# print screen
+Print
+    gnome-screenshot --interactive
+
+# play videos
+super + ctrl + m ; {r,s,p,b}
+    mpv -fs /mnt/main/videos/youtube/{rain.mkv,sleep-songs.webm,pocoyo/*,baby-songs/*}
+
+# power
+super + ctrl + alt {p,r,s,h}
+    sudo {poweroff,reboot,systemctl suspend,systemctl hibernate}
+
+# volume
+XF86Audio{Raise,Lower}Volume
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}5%; status-bar --refresh
+
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle; status-bar --refresh
+
+# brightness
+super + XF86Audio{Raise,Lower}Volume
+    set-brightness {--increase,--decrease}
+super + XF86AudioMute
+    set-brightness {--reset}

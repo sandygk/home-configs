@@ -1,0 +1,25 @@
+#!/bin/bash
+
+find -type f |
+while read originalFile; do
+  #create directory
+  year=$(date -r "$originalFile" +%Y)
+  month=$(date -r "$originalFile" +%m)
+  directory="$year/$month"
+  mkdir -p "$directory" 
+
+  #create new file path
+  fileName=$(date -r "$originalFile" +%Y-%m-%d_%H:%M:%S)
+  extension="${originalFile##*.}"
+  extension="${extension,,}"
+  #move file and add suffix if necessary
+  if [[ ! -e "$directory/$fileName.$extension" ]]; then
+    mv -- "$originalFile" "$directory/$fileName.$extension"
+  else
+    suffix=2
+    while [[ -e "$directory/$fileName"_"$suffix.$extension" ]]; do
+        (( suffix++ ))
+    done
+    mv "$originalFile" "$directory/$fileName"_"$suffix.$extension"
+  fi
+done

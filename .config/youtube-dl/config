@@ -1,0 +1,2 @@
+# Save in /mnt/main/videos/youtube
+-o /mnt/main/videos/youtube/%(title)s.%(ext)s

@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/mnt/main/projects/linux/vim'
+let g:netrw_dirhist_2='/mnt/main/projects/linux'
+let g:netrw_dirhist_3='/mnt/main/projects/linux/suckless'
+let g:netrw_dirhist_4='/mnt/main/projects/linux/suckless/dmenu'
+let g:netrw_dirhist_5='/mnt/main/projects/linux'
+let g:netrw_dirhist_6='/mnt/main/projects/linux/suckless/dwm'
+let g:netrw_dirhist_7='/mnt/main/projects/linux'
+let g:netrw_dirhist_8='/mnt/main/projects/linux/suckless/st'

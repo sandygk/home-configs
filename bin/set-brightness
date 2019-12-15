@@ -1,0 +1,17 @@
+#!/bin/bash
+
+current_gamma=`xgamma  2>&1 | awk '{print substr($3, 1, length($3)-1)}'`
+case $1 in
+  "--increase")
+    xgamma -gamma $(python3 -c "print($current_gamma * 1.07)")
+    ;;
+  "--decrease")
+    xgamma -gamma $(python3 -c "print($current_gamma * 1/1.07)")
+    ;;
+  "--reset")
+    xgamma -gamma 1
+    ;;
+  *)
+    xgamma -gamma $1
+    ;;
+esac
