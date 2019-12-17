@@ -24,4 +24,4 @@ udiskie &
 status-bar --loop &
 
 # Start window manager
-dwm
+awesome
