@@ -9,7 +9,7 @@ while read originalFile; do
   mkdir -p "$directory" 
 
   #create new file path
-  fileName=$(date -r "$originalFile" +%Y-%m-%d_%H:%M:%S)
+  fileName=$(date -r "$originalFile" +%Y-%m-%d_%H-%M-%S)
   extension="${originalFile##*.}"
   extension="${extension,,}"
   #move file and add suffix if necessary
