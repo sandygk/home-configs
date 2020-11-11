@@ -62,6 +62,8 @@ alias ex="$EDITOR ~/.xinitrc"
 alias exr="$EDITOR ~/.Xresources"
 alias er="$EDITOR ~/.config/ranger/rc.conf"
 alias es="$EDITOR ~/.config/sxhkd/sxhkdrc"
+alias ea='$EDITOR ~/.config/awesome/rc.lua'
+alias eat='$EDITOR ~/.config/awesome/theme/theme.lua'
 alias et="$EDITOR $n/todo"
 
 # pacman and yay aliases
